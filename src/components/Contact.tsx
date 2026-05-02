@@ -3,8 +3,18 @@ import Section from "./Section";
 import { Mail, Linkedin, Send } from "lucide-react";
 import { toast } from "sonner";
 
+// Obfuscated to deter scrapers — assembled at runtime, never rendered as text.
+const EMAIL_USER = ["ram", "hoque", "2017"].join("");
+const EMAIL_DOMAIN = ["gmail", "com"].join(".");
+const getEmail = () => `${EMAIL_USER}@${EMAIL_DOMAIN}`;
+
 const Contact = () => {
   const [sending, setSending] = useState(false);
+
+  const onEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = `mailto:${getEmail()}`;
+  };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +32,7 @@ const Contact = () => {
     setSending(true);
     const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:ramhoque2017@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${getEmail()}?subject=${subject}&body=${body}`;
     setTimeout(() => {
       setSending(false);
       toast.success("Opening your email client…");
@@ -40,7 +50,8 @@ const Contact = () => {
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-3">
           <a
-            href="mailto:ramhoque2017@gmail.com"
+            href="#"
+            onClick={onEmailClick}
             className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-soft hover:border-accent transition-colors group"
           >
             <span className="grid h-10 w-10 place-items-center rounded-lg bg-secondary group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
@@ -48,7 +59,7 @@ const Contact = () => {
             </span>
             <div>
               <p className="text-xs uppercase tracking-wider text-muted-foreground">Email</p>
-              <p className="text-sm font-medium">ramhoque2017@gmail.com</p>
+              <p className="text-sm font-medium">Rayeed Hoque</p>
             </div>
           </a>
           <a
