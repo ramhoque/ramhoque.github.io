@@ -33,9 +33,9 @@ const Hero = () => {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed text-balance">
-            Aspiring aerospace engineer focused on design, simulation, and
-            problem-solving — turning sketches into structures that hold up
-            under load.
+            Mechanical engineering student focused on product design,
+            manufacturing, and the automotive industry — turning sketches into
+            parts that ship.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -60,7 +60,7 @@ const Hero = () => {
               { k: "GPA", v: "3.96" },
               { k: "Expected Grad", v: "May 2028" },
               { k: "Internships", v: "Yakima Products" },
-              { k: "Focus", v: "Aerospace" },
+              { k: "Focus", v: "Product Design" },
             ].map((s) => (
               <div key={s.k}>
                 <dt className="text-xs uppercase tracking-wider text-muted-foreground">{s.k}</dt>
