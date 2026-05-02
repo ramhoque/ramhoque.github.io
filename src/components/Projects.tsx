@@ -40,6 +40,8 @@ const projects: Array<{
       { src: testbuckComparison, alt: "Current test buck vs. new design", caption: "Current test buck vs. new design" },
       { src: testbuckCallouts, alt: "Test buck design callouts and dimensions", caption: "Design callouts — 41.33 × 25.66 × 4 in" },
       { src: testbuckSimulation, alt: "SolidWorks FEA stress simulation results", caption: "FEA stress simulation — 3,195 lbf load" },
+      { src: testbuckSecondIteration, alt: "Second design iteration components", caption: "Second design iteration" },
+      { src: testbuckExploded, alt: "Exploded assembly view of test buck", caption: "Exploded view — 57.75 × 50 × 4.5 in" },
     ],
   },
   {
@@ -53,6 +55,10 @@ const projects: Array<{
       { k: "Process", v: "Injection mold" },
     ],
     images: [
+      { src: lockcorePrototypes, alt: "3D-printed plastic plug prototypes", caption: "3D-printed prototypes — iteration sweep" },
+      { src: lockcoreCurrent, alt: "Current lock core clip design", caption: "Current design — metal lock core clip" },
+      { src: lockcoreAlternative, alt: "Alternative coin-turn plug design", caption: "Alternative design — coin-turn plug" },
+      { src: lockcoreImprovements, alt: "Design improvements: draft angles, blank head, easily removable", caption: "Improvements — draft, blank head, removability" },
       { src: sightclipVariations, alt: "SightClip variations", caption: "SightClip geometry variations explored" },
       { src: lockcoreIteration, alt: "First design iteration", caption: "First design iteration" },
     ],
