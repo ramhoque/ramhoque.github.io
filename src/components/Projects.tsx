@@ -1,7 +1,25 @@
 import Section from "./Section";
 import { ArrowUpRight } from "lucide-react";
+import testbuckComparison from "@/assets/testbuck-comparison.png";
+import testbuckCallouts from "@/assets/testbuck-callouts.png";
+import testbuckSimulation from "@/assets/testbuck-simulation.png";
+import lockcoreIteration from "@/assets/lockcore-iteration.png";
+import sightclipVariations from "@/assets/sightclip-variations.png";
+import bikeRender from "@/assets/bike-render.png";
+import bikeExploded from "@/assets/bike-exploded.png";
+import bikeDrawing from "@/assets/bike-drawing.png";
+import hydroFlowchart from "@/assets/hydro-flowchart.png";
 
-const projects = [
+type ProjectImage = { src: string; alt: string; caption?: string };
+
+const projects: Array<{
+  title: string;
+  role: string;
+  description: string;
+  tools: string[];
+  outcomes: { k: string; v: string }[];
+  images: ProjectImage[];
+}> = [
   {
     title: "Yakima Test Buck — Load Capacity Fixture",
     role: "Mechanical Engineering Design Intern · Yakima Products",
@@ -11,6 +29,11 @@ const projects = [
     outcomes: [
       { k: "Max load", v: "1,000 lbs" },
       { k: "Safety factor", v: "4× (OSHA)" },
+    ],
+    images: [
+      { src: testbuckComparison, alt: "Current test buck vs. new design", caption: "Current test buck vs. new design" },
+      { src: testbuckCallouts, alt: "Test buck design callouts and dimensions", caption: "Design callouts — 41.33 × 25.66 × 4 in" },
+      { src: testbuckSimulation, alt: "SolidWorks FEA stress simulation results", caption: "FEA stress simulation — 3,195 lbf load" },
     ],
   },
   {
@@ -23,6 +46,10 @@ const projects = [
       { k: "Tolerance", v: "±0.2 mm" },
       { k: "Process", v: "Injection mold" },
     ],
+    images: [
+      { src: sightclipVariations, alt: "SightClip variations", caption: "SightClip geometry variations explored" },
+      { src: lockcoreIteration, alt: "First design iteration", caption: "First design iteration" },
+    ],
   },
   {
     title: "Off-Road Bicycle — Full Assembly",
@@ -34,6 +61,11 @@ const projects = [
       { k: "Components", v: "13" },
       { k: "Team size", v: "5 engineers" },
     ],
+    images: [
+      { src: bikeRender, alt: "Photorealistic render of off-road bicycle", caption: "Photorealistic rendering" },
+      { src: bikeExploded, alt: "Exploded assembly view of bicycle", caption: "Exploded assembly view" },
+      { src: bikeDrawing, alt: "Engineering drawing of bike assembly", caption: "Engineering drawing & BOM" },
+    ],
   },
   {
     title: "Hydroelectric Viability Analysis",
@@ -44,6 +76,9 @@ const projects = [
     outcomes: [
       { k: "Inputs", v: "5 dynamic" },
       { k: "Constraints", v: "4 validated" },
+    ],
+    images: [
+      { src: hydroFlowchart, alt: "Program logic flowchart", caption: "Program logic flowchart" },
     ],
   },
 ];
@@ -62,6 +97,33 @@ const Projects = () => {
             key={p.title}
             className="group relative flex flex-col rounded-xl border border-border bg-card p-6 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-300"
           >
+            {p.images.length > 0 && (
+              <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-xl border-b border-border bg-secondary/40">
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={p.images[0].src}
+                    alt={p.images[0].alt}
+                    loading="lazy"
+                    className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+                {p.images.length > 1 && (
+                  <div className="grid grid-cols-3 gap-px bg-border">
+                    {p.images.slice(1).map((img) => (
+                      <div key={img.src} className="aspect-square bg-secondary/40 overflow-hidden">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          loading="lazy"
+                          className="h-full w-full object-contain p-2"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
             <div className="flex items-start justify-between gap-3">
               <div>
                 <h3 className="font-display text-lg font-semibold leading-snug">
