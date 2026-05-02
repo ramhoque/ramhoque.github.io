@@ -11,8 +11,8 @@ const About = () => {
         <div className="md:col-span-2 space-y-5 text-foreground/85 leading-relaxed">
           <p>
             I'm a Mechanical Engineering student at Oregon State University with
-            a focus on aerospace structures and mechanical design. My
-            internship at <span className="font-medium text-foreground">Yakima Products</span> taught
+            a focus on product design, manufacturing, and the automotive
+            industry. My internship at <span className="font-medium text-foreground">Yakima Products</span> taught
             me how a clean CAD model becomes a real fixture under 1,000 lbs of
             load — and how tolerances, materials, and manufacturability
             quietly decide whether a design ships.
@@ -41,10 +41,10 @@ const About = () => {
           <div className="rounded-xl border border-border p-5 bg-card shadow-soft">
             <p className="text-xs uppercase tracking-wider text-muted-foreground">Interests</p>
             <ul className="mt-2 space-y-1 text-sm">
-              <li>· Aerospace structures</li>
+              <li>· Product design</li>
+              <li>· Manufacturing &amp; DFM</li>
+              <li>· Automotive industry</li>
               <li>· CAD &amp; FEA</li>
-              <li>· Computational methods</li>
-              <li>· Model rocketry</li>
             </ul>
           </div>
         </aside>
