@@ -35,7 +35,7 @@ const Contact = () => {
       id="contact"
       eyebrow="Get in Touch"
       title="Let's build something."
-      description="Open to Summer 2026 mechanical and aerospace engineering internships. The fastest way to reach me is email."
+      description="Open to Summer 2026 mechanical engineering internships. The fastest way to reach me is email."
     >
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-3">
