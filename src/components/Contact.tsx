@@ -52,7 +52,7 @@ const Contact = () => {
             </div>
           </a>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/rayeed-hoque-0782343a5/"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-soft hover:border-accent transition-colors group"
