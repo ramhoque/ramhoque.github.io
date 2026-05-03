@@ -14,8 +14,8 @@ const About = () => {
             a focus on product design, manufacturing, and the automotive
             industry. My internship at <span className="font-medium text-foreground">Yakima Products</span> taught
             me how a clean CAD model becomes a real fixture under 1,000 lbs of
-            load — and how tolerances, materials, and manufacturability
-            quietly decide whether a design ships.
+            load, and how tolerances, materials, and manufacturability quietly
+            decide whether a design ships.
           </p>
           <p>
             I'm drawn to problems where simulation meets the physical world:

@@ -34,8 +34,7 @@ const Hero = () => {
 
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground leading-relaxed text-balance">
             Mechanical engineering student focused on product design,
-            manufacturing, and the automotive industry — turning sketches into
-            parts that ship.
+            manufacturing, and the automotive industry.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
